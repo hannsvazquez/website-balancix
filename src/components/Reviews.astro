@@ -1,0 +1,44 @@
+---
+import LinesBackground from './LinesBackground.astro'
+import ReviewItem from './ReviewItem.astro'
+
+type Review = {
+  review: string
+  author: string
+  image: string
+  inverted?: boolean
+}
+
+const reviews: Review[] = [
+  {
+    review:
+      'La misión de Balancix es cerrar la brecha entre la formación universitaria y las demandas del mercado laboral actual. Buscamos que más jóvenes accedan a oportunidades en la industria tech con salarios competitivos y un equilibrio entre el trabajo y vida personal, todo bajo la modalidad de trabajar desde cualquier parte del mundo.',
+    author: 'Hann',
+    image: './pierre.webp'
+  },
+  {
+    review:
+      'Balancix es una iniciativa peruana innovadora, con un enfoque totalmente práctico para preparar a los estudiantes en las posiciones más demandadas del sector tech. Lo que realmente destaco es su red de contactos en el mundo de las startups, lo que brinda una gran ventaja a quienes buscan empezar su carrera profesional en este sector que brinda mucha flexibilidad pero a la vez con grandes retos.',
+    author: 'Daniela',
+    image: './Daniela.jpg',
+    inverted: true
+  }
+]
+---
+
+<section
+  class='relative min-h-[95vh] max-w-7xl px-8 py-12 flex flex-col items-center justify-center gap-8'
+>
+  <!-- Lines -->
+  <LinesBackground />
+  {
+    reviews.map(({ review, author, image, inverted }) => (
+      <ReviewItem
+        review={review}
+        author={author}
+        image={image}
+        inverted={inverted ?? false}
+      />
+    ))
+  }
+</section>

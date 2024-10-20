@@ -1,0 +1,27 @@
+---
+//params get review
+const { review, author, image, inverted = false } = Astro.props
+---
+
+<div
+  class={'max-w-5xl flex flex-col md:flex-row items-center justify-center gap-8' +
+    (inverted ? ' md:flex-row-reverse' : '')}
+>
+  <blockquote class='text-left text-white'>
+    <p class='md:text-xl italic leading-relaxed text-gray-300 md:max-w-xl'>
+      "{review}"
+    </p>
+    <footer>
+      <cite class='text-gray-400 font-bold text-xl'>{author}</cite>
+    </footer>
+  </blockquote>
+  <img
+    src={image}
+    alt='Daniela'
+    class='aspect-square h-[350px] w-full object-contain rounded-md'
+    style='
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
+    mask-image: linear-gradient(to bottom, black 79%, transparent 100%);
+  '
+  />
+</div>

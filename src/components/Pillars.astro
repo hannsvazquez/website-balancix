@@ -1,49 +1,54 @@
 ---
-import PillarItem from "./PillarItem.astro";
+import PillarItem from './PillarItem.astro'
 
 type Pillar = {
-  title: string;
-  description: string;
-  icon: string;
-};
+  title: string
+  description: string
+  icon: string
+}
 
 const pillars: Pillar[] = [
   {
-    title: "Desarrollo Integral de Habilidades",
-    description: "Formación completa en habilidades técnicas y blandas.",
-    icon: "gear"
+    title: 'Desarrollo Integral de Habilidades',
+    description: 'Formación completa en habilidades técnicas y blandas.',
+    icon: 'gear'
   },
   {
-    title: "Dominio de Herramientas Técnicas",
-    description: "Aprende las herramientas más demandadas del sector.",
-    icon: "computer"
+    title: 'Dominio de Herramientas Técnicas',
+    description: 'Aprende las herramientas más demandadas del sector.',
+    icon: 'computer'
   },
   {
-    title: "Fortalecimiento de la Comunicación",
-    description: "Mejora tu inglés y habilidades de comunicación.",
-    icon: "dialog"
+    title: 'Fortalecimiento de la Comunicación',
+    description: 'Mejora tu inglés y habilidades de comunicación.',
+    icon: 'dialog'
   },
   {
-    title: "Preparación para Entrevistas",
-    description: "Estrategias para destacar en entrevistas tech.",
-    icon: "microphone"
+    title: 'Preparación para Entrevistas',
+    description: 'Estrategias para destacar en entrevistas tech.',
+    icon: 'microphone'
   },
   {
-    title: "Conexión con Startups",
-    description: "Accede a las mejores startups de LatAm y USA.",
-    icon: "chart"
+    title: 'Conexión con Startups',
+    description: 'Accede a las mejores startups de LatAm y USA.',
+    icon: 'chart'
   },
   {
-    title: "Soporte Continuo",
-    description: "Te acompañamos en todo el proceso.",
-    icon: "support"
+    title: 'Soporte Continuo',
+    description: 'Te acompañamos en todo el proceso.',
+    icon: 'support'
   }
-];
-
+]
 ---
 
-<section class="relative max-w-7xl px-8 py-12 flex items-center justify-center gap-8">
-  <div class="grid gap-6 lg:grid-cols-3 sm:grid-cols-2 md:py-8">
+<section
+  class='relative max-w-7xl px-8 py-12 flex flex-col items-center justify-center gap-8'
+>
+  <span
+    class='text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text px-5'
+    >Pilares
+  </span>
+  <div class='grid gap-6 lg:grid-cols-3 sm:grid-cols-2 md:py-8'>
     {
       pillars.map((pillar) => (
         <PillarItem
@@ -54,5 +59,4 @@ const pillars: Pillar[] = [
       ))
     }
   </div>
-
 </section>

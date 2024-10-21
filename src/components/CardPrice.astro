@@ -1,0 +1,79 @@
+---
+import BtnPrimary from './BtnPrimary.astro'
+
+const {
+  title,
+  duration,
+  price,
+  offers = [],
+  isBetterPrice = false
+} = Astro.props
+---
+
+<div
+  class={`flex flex-col rounded-3xl p-[0.060rem] shadow-2xl shadow-vulcan-950 bg-gradient-to-b ${
+    isBetterPrice
+      ? 'order-first from-indigo-500  via-indigo-500/5 lg:order-none'
+      : 'from-slate-700 via-indigo-500/5'
+  }`}
+>
+  <div
+    class='h-full p-8 bg-background rounded-3xl flex flex-col justify-between'
+  >
+    <div>
+      <h3 class='mt-5 text-xl text-white'>
+        <span class='text-3xl'>${price}</span> — {title}
+      </h3>
+      <p class='mt-2 text-base text-vulcan-300'>{duration}</p>
+      <ul
+        role='list'
+        class='flex flex-col order-last mt-10 text-sm text-vulcan-200 gap-y-3'
+      >
+        {
+          offers.map((offer: string) => (
+            <li class='flex items-center'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                class='w-4 h-4 icon icon-tabler icon-tabler-circle-check'
+                viewBox='0 0 24 24'
+                stroke-width='2'
+                stroke='currentColor'
+                fill='none'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+              >
+                <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                <path d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0' />
+                <path d='M9 12l2 2l4 -4' />
+              </svg>
+              <span class='ml-4'>{offer}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class='mt-8'>
+      {
+        isBetterPrice ? (
+          <a
+            class='flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold text-white transition-all border rounded-lg hover:text-indigo-100 border-primary bg-primary'
+            aria-label='Big fish tier'
+            target='_blank'
+            href='https://tally.so/r/w2JEvL'
+          >
+            Comenzar
+          </a>
+        ) : (
+          <a
+            class='flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold text-white transition-all border rounded-lg hover:text-indigo-50 border-vulcan-700'
+            aria-label='Big fish tier'
+            target='_blank'
+            href='https://tally.so/r/w2JEvL'
+          >
+            Comenzar
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>

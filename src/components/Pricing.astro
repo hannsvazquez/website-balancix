@@ -1,2 +1,66 @@
+---
+import CardPrice from './CardPrice.astro'
+import LinesBackground from './LinesBackground.astro'
 
+type Price = {
+  title: string
+  duration: string
+  price: string
+  offers: string[]
+  isBetterPrice?: boolean
+}
 
+const prices: Price[] = [
+  {
+    price: '29.99',
+    title: 'Balancix Started ',
+    duration: '5 meses',
+    offers: [
+      'Clases con profesionales del sector tech',
+      '3 meses de formación',
+      '2 meses para entrevistas',
+      'Semanales para crear tu portafolio',
+      'Preferencial a startups en LATAM',
+      'Participa y conecta en Discord'
+    ]
+  },
+  {
+    price: '59.90',
+    title: 'Balancix Global ',
+    duration: '8 meses',
+    offers: [
+      'Todo de Balancix Started',
+      '6 meses de inglés enfocado en tu carrera',
+      '+100 startups en LATAM, y EE. UU'
+    ],
+    isBetterPrice: true
+  }
+]
+---
+
+<section
+  class='relative max-w-7xl px-8 py-12 flex items-center justify-center gap-8'
+>
+  <!-- Lines -->
+  <LinesBackground />
+
+  <div class='px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-32 lg:py-24 z-20'>
+    <div class='text-center max-w-2xl mx-auto'>
+      <span
+        class='text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text'
+        >Precios
+      </span>
+      <h2
+        class='mt-8 text-3xl font-normal tracking-tight text-balance text-white'
+      >
+        <span class='text-secondary font-bold'>20% de descuento </span>
+        si pagas 5 meses por adelantado en el plan Started o 8 meses en el plan Global.
+      </h2>
+    </div>
+    <div
+      class='grid grid-cols-1 mt-16 -mx-4 gap-y-10 sm:mx-auto lg:max-w-none md:grid-cols-2 lg:grid-cols-2 gap-x-4 lg:-mx-8'
+    >
+      {prices.map((price) => <CardPrice {...price} />)}
+    </div>
+  </div>
+</section>

@@ -19,7 +19,7 @@ const { title } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-background text-white">
+  <body class='bg-background text-white'>
     <Header />
     <main>
       <slot />
@@ -28,6 +28,9 @@ const { title } = Astro.props
   </body>
 </html>
 <style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
   .btn-hover:hover {
     transition: all 0.2s ease-in-out;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);

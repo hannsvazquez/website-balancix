@@ -1,0 +1,58 @@
+---
+import PillarItem from "./PillarItem.astro";
+
+type Pillar = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
+const pillars: Pillar[] = [
+  {
+    title: "Desarrollo Integral de Habilidades",
+    description: "Formación completa en habilidades técnicas y blandas.",
+    icon: "gear"
+  },
+  {
+    title: "Dominio de Herramientas Técnicas",
+    description: "Aprende las herramientas más demandadas del sector.",
+    icon: "computer"
+  },
+  {
+    title: "Fortalecimiento de la Comunicación",
+    description: "Mejora tu inglés y habilidades de comunicación.",
+    icon: "dialog"
+  },
+  {
+    title: "Preparación para Entrevistas",
+    description: "Estrategias para destacar en entrevistas tech.",
+    icon: "microphone"
+  },
+  {
+    title: "Conexión con Startups",
+    description: "Accede a las mejores startups de LatAm y USA.",
+    icon: "chart"
+  },
+  {
+    title: "Soporte Continuo",
+    description: "Te acompañamos en todo el proceso.",
+    icon: "support"
+  }
+];
+
+---
+
+<section class="relative max-w-7xl px-8 py-12 flex items-center justify-center gap-8">
+  <div class="grid gap-6 lg:grid-cols-3 sm:grid-cols-2 md:py-8">
+    {
+      pillars.map((pillar) => (
+        <PillarItem
+          title={pillar.title}
+          description={pillar.description}
+          icon={pillar.icon}
+        />
+      ))
+    }
+  </div>
+
+</section>

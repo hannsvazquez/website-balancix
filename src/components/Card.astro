@@ -1,6 +1,8 @@
 ---
+import BtnPrimary from "./BtnPrimary.astro"
+
 // get params  number, title, description
-const { number, title, description } = Astro.props
+const { number, title, description,cta = false } = Astro.props
 ---
 
 <div
@@ -29,4 +31,10 @@ const { number, title, description } = Astro.props
   >
     {description ?? ''}
   </p>
+
+  {
+    cta && (
+      <BtnPrimary text="Inscríbete" link="https://tally.so/r/w2JEvL"/>
+    )
+  }
 </div>

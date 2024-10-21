@@ -2,12 +2,20 @@
 import Card from './Card.astro'
 import LinesBackground from './LinesBackground.astro'
 
-const dataSteps = [
+type Step = {
+  number: string
+  title: string
+  description: string
+  cta?: boolean
+}
+
+const dataSteps: Step[] = [
   {
     number: '1',
     title: ' Inscríbete al Webinar',
     description:
-      'Únete al webinar gratuito para resolver tus dudas (fechas, costos, duración, y más).'
+      'Únete al webinar gratuito para resolver tus dudas (fechas, costos, duración, y más).',
+    cta: true
   },
   {
     number: '2',
@@ -41,7 +49,7 @@ const dataSteps = [
 
   <!-- Lines -->
   <LinesBackground />
-  <h2 class='text-center text-2xl font-bold'>Pasos para empezar</h2>
+  <!-- <h2 class='text-center text-2xl font-bold'>Pasos para empezar</h2> -->
   <div class='max-w-5xl grid gap-4 md:grid-cols-3 sm:grid-cols-2'>
     {
       dataSteps.map((step) => (
@@ -49,6 +57,7 @@ const dataSteps = [
           number={step.number}
           title={step.title}
           description={step.description}
+          cta={step.cta}
         />
       ))
     }

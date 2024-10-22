@@ -2,72 +2,72 @@
 import { Icon } from 'astro-icon/components'
 ---
 
-<header
-  class='max-w-7xl flex justify-between items-center p-8 fixed z-50 w-full border-b border-white/5 backdrop-blur-2xl'
->
-  <b class='font-bold text-2xl'
-    >Balan<span class='text-secondary font-extrabold uppercase'>cix</span>
-  </b>
+<header class='p-8 fixed z-50 w-full border-b border-white/5 backdrop-blur-2xl'>
+  <div class='max-w-[1440px] m-auto flex justify-between items-center'>
+    <b class='font-bold text-2xl'
+      >Balan<span class='text-secondary font-extrabold uppercase'>cix</span>
+    </b>
 
-  <nav class='hidden md:block'>
-    <ul class='flex gap-4 items-center justify-center'>
-      <li>
-        <a href='#home'>Inicio</a>
-      </li>
-      <li>
-        <a href='#prices'>Precios</a>
-      </li>
-      <li>
-        <a href='#faq'>Preguntas frecuentes</a>
+    <nav class='hidden md:block'>
+      <ul class='flex gap-4 items-center justify-center'>
         <li>
+          <a href='#home'>Inicio</a>
+        </li>
+        <li>
+          <a href='#prices'>Precios</a>
+        </li>
+        <li>
+          <a href='#faq'>Preguntas frecuentes</a>
+          <li>
+            <a
+              href='https://tally.so/r/w2JEvL'
+              target='_blank'
+              class='py-2 px-5 bg-primary rounded-md text-accent font-semibold'
+            >
+              Webinar
+            </a>
+          </li>
+        </li>
+      </ul>
+    </nav>
+    <!-- Burger -->
+    <div
+      id='burger'
+      class='cursor-pointer flex md:hidden gap-2 items-left flex-col'
+    >
+      <span class='block h-[2px] w-[30px] bg-white'></span>
+      <span class='block h-[2px] w-[15px] bg-white'></span>
+      <span class='block h-[2px] w-[30px] bg-white'></span>
+    </div>
+
+    <Icon
+      name='close'
+      id='close'
+      class='text-white text-3xl cursor-pointer hidden'
+    />
+
+    <!-- Menú desplegable para móviles -->
+    <nav
+      id='mobile-menu'
+      class='hidden md:hidden fixed z-50 border-b border-white/5 top-[96px] left-0 w-full backdrop-blur-2xl bg-background/95 py-8 px-4 text-center'
+    >
+      <ul>
+        <li class='mb-4'><a class='w-full block' href='#home'>Inicio</a></li>
+        <li class='mb-4'><a class='w-full block' href='#prices'>Precios</a></li>
+        <li class='mb-4'>
+          <a class='w-full block' href='#faq'>Preguntas frecuentes</a>
+        </li>
+        <li class='mb-4'>
           <a
             href='https://tally.so/r/w2JEvL'
             target='_blank'
-            class='py-2 px-5 bg-primary rounded-md text-accent font-semibold'
+            class='w-full block py-2 px-5 bg-primary rounded-md text-accent font-semibold'
+            >Webinar</a
           >
-            Webinar
-          </a>
         </li>
-      </li>
-    </ul>
-  </nav>
-  <!-- Burger -->
-  <div
-    id='burger'
-    class='cursor-pointer flex md:hidden gap-2 items-left flex-col'
-  >
-    <span class='block h-[2px] w-[30px] bg-white'></span>
-    <span class='block h-[2px] w-[15px] bg-white'></span>
-    <span class='block h-[2px] w-[30px] bg-white'></span>
+      </ul>
+    </nav>
   </div>
-
-  <Icon
-    name='close'
-    id='close'
-    class='text-white text-3xl cursor-pointer hidden'
-  />
-
-  <!-- Menú desplegable para móviles -->
-  <nav
-    id='mobile-menu'
-    class='hidden md:hidden fixed z-50 border-b border-white/5 top-[96px] left-0 w-full backdrop-blur-2xl bg-background/95 py-8 px-4 text-center'
-  >
-    <ul>
-      <li class='mb-4'><a class='w-full block' href='#home'>Inicio</a></li>
-      <li class='mb-4'><a class='w-full block' href='#prices'>Precios</a></li>
-      <li class='mb-4'>
-        <a class='w-full block' href='#faq'>Preguntas frecuentes</a>
-      </li>
-      <li class='mb-4'>
-        <a
-          href='https://tally.so/r/w2JEvL'
-          target='_blank'
-          class='w-full block py-2 px-5 bg-primary rounded-md text-accent font-semibold'
-          >Webinar</a
-        >
-      </li>
-    </ul>
-  </nav>
 </header>
 
 <script>

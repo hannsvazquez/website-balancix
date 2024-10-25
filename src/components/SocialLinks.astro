@@ -1,0 +1,33 @@
+---
+import Link from "./Link.astro";
+const socials = [
+  {
+    label: "Instagram",
+    link: "https://www.instagram.com/balancix_",
+    icon: "instagram",
+  },
+  {
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/company/balancix/about/",
+    icon: "linkedin",
+  }
+]
+---
+
+<ul role="list" class="flex flex-row gap-2">
+  {
+    socials.map((social, index) => (
+      <>
+        <li>
+          <Link 
+            href={social.link} 
+            label={social.label} 
+            icon={social.icon} 
+            showIcon={true} 
+          />
+        </li>
+        {socials.length - 1 !== index && <li>/</li>}
+      </>
+    ))
+  }
+</ul>

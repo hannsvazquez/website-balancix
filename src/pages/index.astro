@@ -1,26 +1,61 @@
 ---
-import CTA from '@components/CTA.astro';
-import FAQ from '@components/FAQ.astro';
-import Hero from '@components/Hero.astro';
-import Parners from '@components/Partners.astro';
-import Pillars from '@components/Pillars.astro';
-import Pricing from '@components/Pricing.astro';
-import Reviews from '@components/Reviews.astro';
-import Steps from '@components/Steps.astro';
-import Videos from '@components/Videos.astro';
+import CTA from '@components/CTA.astro'
+import FAQ from '@components/FAQ.astro'
+import Hero from '@components/Hero.astro'
+import Parners from '@components/Partners.astro'
+import Pillars from '@components/Pillars.astro'
+import Pricing from '@components/Pricing.astro'
+import Reviews from '@components/Reviews.astro'
+import Steps from '@components/Steps.astro'
+import Videos from '@components/Videos.astro'
+import PostCard from '@/components/PostCard.astro'
 
-import Layout from '@layouts/Layout.astro';
+import Layout from '@layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+import LinesBackground from '@components/LinesBackground.astro'
 
+const posts = (await getCollection('posts')).sort(function (
+  first: any,
+  second: any
+) {
+  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime()
+})
 ---
 
-<Layout title="Balancix - Impulsa tu carrera">
-	<Hero />
-	<Parners/>
-	<Videos/>
-	<Reviews/>
-	<Steps/>
-	<Pillars/>
-	<Pricing/>
-	<CTA/>
-	<FAQ/>
+<Layout title='Balancix - Impulsa tu carrera'>
+  <Hero />
+  <Parners />
+  <Videos />
+  <Reviews />
+  <Steps />
+  <Pillars />
+  <Pricing />
+  <CTA />
+  <FAQ />
+  <section class='relative'>
+    <LinesBackground />
+    <div
+      class='relative px-8 py-12 mx-auto max-w-[1440px] md:px-12 lg:px-32 lg:pt-24'
+    >
+      <div class='text-center max-w-2xl mx-auto mb-6'>
+        <span
+          class='text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text'
+          >Nuestro blog
+        </span>
+      </div>
+      {
+        posts.length !== 0 &&
+          posts
+            .slice(0, 2)
+            .map((post: any) => (
+              <PostCard
+                publishedAt={post.data.publishedAt}
+                title={post.data.title}
+                description={post.data.description}
+                slug={post.slug}
+              />
+            ))
+      }
+    </div>
+  </section>
 </Layout>

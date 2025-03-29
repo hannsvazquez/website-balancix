@@ -8,7 +8,8 @@ const postsCollection = defineCollection({
     description: z.string(),
     isPublish: z.boolean(),
     isDraft: z.boolean().default(false),
-    tags: z.array(z.string()).default([])
+    tags: z.array(z.string()).default([]),
+    lang: z.string(),
   })
 })
 

@@ -1,6 +1,12 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
+import { translations } from "../i18n/translations.ts";
+
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
+
 ---
+
 
 <header class='p-8 fixed z-50 w-full border-b border-white/5 backdrop-blur-2xl'>
   <div class='max-w-[1440px] m-auto flex justify-between items-center'>
@@ -9,16 +15,16 @@ import { Icon } from 'astro-icon/components'
     <nav class='hidden md:block'>
       <ul class='flex gap-4 items-center justify-center'>
         <li>
-          <a href='/#home'>Inicio</a>
+          <a href={`/${lang}/#home`}>{translations[lang]["nav.home"]}</a>
         </li>
         <li>
-          <a href='/#prices'>Precios</a>
+          <a href="/#prices">{translations[lang]["nav.pricing"]}</a>
         </li>
         <li>
-          <a href='/posts'>Blog</a>
+          <a href={`/${lang}/posts`}>{translations[lang]["nav.blog"]}</a>
         </li>
         <li>
-          <a href='/#faq'>Preguntas frecuentes</a>
+          <a href="/#faq">{translations[lang]["nav.faq"]}</a>
           <li>
             <a
               href='https://www.youtube.com/watch?v=Ao3Qbpv8-x4'
@@ -53,10 +59,10 @@ import { Icon } from 'astro-icon/components'
       class='hidden md:hidden fixed z-50 border-b border-white/5 top-[96px] left-0 w-full backdrop-blur-2xl bg-background/95 py-8 px-4 text-center'
     >
       <ul>
-        <li class='mb-4'><a class='w-full block' href='#home'>Inicio</a></li>
-        <li class='mb-4'><a class='w-full block' href='#prices'>Precios</a></li>
+        <li class='mb-4'><a class='w-full block' href={`/${lang}/#home`}>{translations[lang]["nav.home"]}</a></li>
+        <li class='mb-4'><a class='w-full block' href='#prices'>{translations[lang]["nav.pricing"]}</a></li>
         <li class='mb-4'>
-          <a class='w-full block' href='#faq'>Preguntas frecuentes</a>
+          <a class='w-full block' href='#faq'>{translations[lang]["nav.faq"]}</a>
         </li>
         <li class='mb-4'>
           <a

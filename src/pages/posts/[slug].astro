@@ -1,8 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import Layout from "@/layouts/Layout.astro";
-import formatDate from "@/utils/formatDate";
+import Layout from "../../layouts/Layout.astro";
+import formatDate from "../../utils/formatDate";
+
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -25,7 +26,7 @@ const { Content,remarkPluginFrontmatter } = await post.render();
 <Layout title={post.data.title} description={post.data.description}>
   <main class="post mx-auto flex w-full max-w-[100ch] flex-col gap-4 pt-10 mt-[6rem] px-[2rem] md:px-0">
     <header role="presentation">
-      <h1 class="text-3xl font-bold">
+      <h1 class="text-3xl font-bold mb-8">
         <!-- <Image
             src={post.data.icon}
             class="w-[80%] md:w-1/2 self-center"
@@ -48,9 +49,11 @@ const { Content,remarkPluginFrontmatter } = await post.render();
         }
       </div>
       <p class="italic">{post.data.description}</p>
-      <hr class="my-4" />
+      <hr class="my-4 border-gray-700" />
     </header>
 
-    <Content />
+    <div class="prose prose-lg prose-invert max-w-none">
+      <Content />
+    </div>
   </main>
 </Layout>

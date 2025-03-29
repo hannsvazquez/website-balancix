@@ -21,5 +21,13 @@ export default defineConfig({
       transformers: [],
     },
     remarkPlugins: [remarkReadingTime],
+  },
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es','en'],
+    routing: {
+      prefixDefaultLocale: true,
+    },
+
   }
 });

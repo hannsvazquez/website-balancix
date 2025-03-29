@@ -14,12 +14,13 @@ import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import LinesBackground from '@components/LinesBackground.astro'
 
-const posts = (await getCollection('posts')).sort(function (
-  first: any,
-  second: any
-) {
-  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime()
-})
+const lang = Astro.url.pathname.includes("/en/") ? "en": "es";
+
+const posts = (await getCollection("posts"))
+
+  .filter(post => post.data.lang === lang)
+  .sort((first,second) => second.data.publishedAt.getTime() - first.data.publishedAt.getTime());
+
 ---
 
 <Layout title='Consigue prácticas remotas en startups'>
@@ -49,6 +50,7 @@ const posts = (await getCollection('posts')).sort(function (
             .slice(0, 2)
             .map((post: any) => (
               <PostCard
+                lang={lang}
                 publishedAt={post.data.publishedAt}
                 title={post.data.title}
                 description={post.data.description}

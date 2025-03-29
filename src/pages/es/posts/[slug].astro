@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import formatDate from "@/utils/formatDate"; 
+
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+
+  return posts
+    .filter((post) => post.data.lang === "es") // 
+    .map((post) => ({
+      params: { slug: post.slug }, 
+      props: { post },
+    }));
+}
+
+type Props = {
+  post: CollectionEntry<"posts">;
+};
+
+const { post } = Astro.props;
+const { Content,remarkPluginFrontmatter } = await post.render();
+
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+  <main class="post mx-auto flex w-full max-w-[100ch] flex-col gap-4 pt-10 mt-[6rem] px-[2rem] md:px-0">
+    <header role="presentation">
+      <h1 class="text-3xl font-bold mb-8">
+        <!-- <Image
+            src={post.data.icon}
+            class="w-[80%] md:w-1/2 self-center"
+            alt="Your Profile"
+            width="200"
+            height="200"
+          /> -->
+        {post.data.title}
+      </h1>
+      <p>
+        📅 {formatDate(post.data.publishedAt)} - ⏱ {remarkPluginFrontmatter.minutesRead?.split(' ')[0]} minuto{remarkPluginFrontmatter.minutesRead?.split(' ')[0] === '1' ? '' : 's'} de lectura
+      </p>
+      <div class="flex flex-row gap-2 flex-wrap">
+        {
+          post.data.tags.map((tag:any, index: any) => (
+            <>
+              <span class="bg-gray-700 rounded-md p-1 block my-2 w-max">{tag ?? 'Otro'} </span>
+            </>
+          ))
+        }
+      </div>
+      <p class="italic">{post.data.description}</p>
+      <hr class="my-4 border-gray-700" />
+    </header>
+
+    <div class="prose prose-lg prose-invert max-w-none">
+      <Content />
+    </div>
+  </main>
+</Layout>

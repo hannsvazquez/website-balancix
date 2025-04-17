@@ -1,9 +1,14 @@
+---
+import { translations } from "../i18n/translations.ts";
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
+---
 <section
   class='relative max-w-[1440px] px-6 py-12 flex items-center justify-center gap-8'
 >
   <div class='flex flex-col gap-8 w-full justify-center items-center'>
     <h3 class='text-2xl font-bold text-balance text-center'>
-      Webinar - Programa de formación Balancix
+      {translations[lang]["title.webinar"]}
     </h3>
     <iframe
       class='rounded-md w-full md:w-[560px]'

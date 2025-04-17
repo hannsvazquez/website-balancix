@@ -10,7 +10,9 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 
 <header class='p-8 fixed z-50 w-full border-b border-white/5 backdrop-blur-2xl'>
   <div class='max-w-[1440px] m-auto flex justify-between items-center'>
-    <img src="/logo/logo_temporal_balancix.svg" alt="Balancix Logo" class="h-10" />
+    <a href={`/${lang}/#home`}>
+      <img src="/logo/logo_temporal_balancix.svg" alt="Balancix Logo" class="h-10" />
+    </a>
 
     <nav class='hidden md:block'>
       <ul class='flex gap-4 items-center justify-center'>

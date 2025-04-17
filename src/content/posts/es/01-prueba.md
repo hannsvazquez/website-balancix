@@ -2,13 +2,13 @@
 title: "¿Por qué empezar tu carrera en una startup?"
 tags: ["#remotework🌍","#internships🧑‍🎓", "#career-tips💡"]
 lang: "es"
-publishedAt: 2023-05-24
+publishedAt: 2025-04-01
 description: "Trabajar para una startup como recién graduado puede tener múltiples beneficios, desde una curva de aprendizaje acelerada hasta la oportunidad de ser parte de la creación de productos que terminarán cambiando industrias completas."
 slug: "empezar-tu-carrera-en-una-startup"
 isPublish: true
 ---
 
-![Grupo de estudiantes en la universidad.](/blog-imgs/working-remotely.webp)
+![Trabajando desde una cafetería.](/blog-imgs/working-remotely.webp)
 
 Bienvenid@ al blog de **Balancix**, el espacio donde te ayudamos a descubrir cómo dar tus primeros pasos en el mundo laboral con oportunidades que realmente suman a tu futuro, ya sea si eres o no una persona técnica, con Balancix puedes tener la posibilidad de ingresar al fascinante mundo de las startups.
 

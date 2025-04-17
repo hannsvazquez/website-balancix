@@ -39,28 +39,30 @@ const posts = (await getCollection("posts"))
   <section class='relative'>
     <LinesBackground />
     <div
-      class='relative px-8 py-12 mx-auto max-w-[1440px] md:px-12 lg:px-32 lg:pt-24'
+      class='relative px-8 py-12 mx-auto max-w-[1440px] md:px-12 lg:px-32 lg:pt-24 flex flex-col items-center'
     >
       <div class='text-center max-w-2xl mx-auto mb-6'>
         <span
           class='text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text'
-          >{translations[lang]["title.resources"]}
+          >Nuestro blog
         </span>
       </div>
-      {
-        posts.length !== 0 &&
-          posts
-            .slice(0, 2)
-            .map((post: any) => (
-              <PostCard
-                lang="es"
-                publishedAt={post.data.publishedAt}
-                title={post.data.title}
-                description={post.data.description}
-                slug={post.slug}
-              />
-            ))
-      }
+      <div class="flex flex-wrap justify-center gap-6">
+        {
+          posts.length !== 0 &&
+            posts
+              .slice(0, 2)
+              .map((post: any) => (
+                <PostCard
+                  lang={lang}
+                  publishedAt={post.data.publishedAt}
+                  title={post.data.title}
+                  description={post.data.description}
+                  slug={post.slug}
+                />
+              ))
+        }
+      </div>
     </div>
   </section>
 </Layout>

@@ -11,7 +11,6 @@ export const translations = {
         'nav.pricing': 'Precios',
         'nav.blog': 'Blog',
         'nav.faq': 'Preguntas Frecuentes',
-        'nav.webinar': 'Webinar',
 
         'hero.span': 'Consigue Prácticas',
         'hero.title': '100% remotas',
@@ -21,6 +20,7 @@ export const translations = {
         'button.information': 'Más información',
 
         'title.resources': 'Aprende más en nuestro blog',
+        'title.webinar':'Aprende más en nuestro webinar',
 
     },
     en: {
@@ -28,7 +28,6 @@ export const translations = {
         'nav.pricing': 'Pricing',
         'nav.blog': 'Blog',
         'nav.faq': 'FAQ',
-        'nav.webinar': 'Webinar',
         
         'hero.span': 'Be ready for',
         'hero.title': 'remote internships',
@@ -37,5 +36,7 @@ export const translations = {
         'button.webinar':'Watch Webinar',
         'button.information': 'More information',
         'title.resources': 'Free resources to keep learning',
+
+        'title.webinar': 'Learn more in our webinar recording',
     }
 };

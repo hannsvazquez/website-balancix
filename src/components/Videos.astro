@@ -10,14 +10,14 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
     <h3 class='text-2xl font-bold text-balance text-center'>
       {translations[lang]["title.webinar"]}
     </h3>
-    <iframe
-      class='rounded-md w-full md:w-[560px]'
-      width='560'
-      height='315'
-      src='https://www.youtube.com/embed/Ao3Qbpv8-x4?si=cfq4IXuR50ZjEIeC'
-      title='YouTube video player'
-      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-      referrerpolicy='strict-origin-when-cross-origin'
-      allowfullscreen></iframe>
-  </div>
+    <div class="w-full max-w-3xl aspect-video">
+      <iframe 
+        src="https://player.vimeo.com/video/1076550088" 
+        class="w-full h-full"
+        frameborder="0" 
+        allow="fullscreen; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div>
 </section>

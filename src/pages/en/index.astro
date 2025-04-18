@@ -47,20 +47,22 @@ const posts = (await getCollection('posts'))
           >{translations[lang]["title.resources"]}
         </span>
       </div>
-      {
-        posts.length !== 0 &&
-          posts
-            .slice(0, 2)
-            .map((post: any) => (
-              <PostCard
-                lang="en"
-                publishedAt={post.data.publishedAt}
-                title={post.data.title}
-                description={post.data.description}
-                slug={post.slug}
-              />
-            ))
-      }
+      <div class="flex flex-wrap justify-center gap-6">
+        {
+          posts.length !== 0 &&
+            posts
+              .slice(0, 2)
+              .map((post: any) => (
+                <PostCard
+                  lang={lang}
+                  publishedAt={post.data.publishedAt}
+                  title={post.data.title}
+                  description={post.data.description}
+                  slug={post.slug}
+                />
+              ))
+        }
+      </div>
     </div>
   </section>
 </Layout>

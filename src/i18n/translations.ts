@@ -19,7 +19,7 @@ export const translations = {
         'button.webinar':'Ver Webinar',
         'button.information': 'Más información',
 
-        'title.resources': 'Aprende más en nuestro blog',
+        'title.resources': 'Noticias y Artículos',
         'title.webinar':'Aprende más en nuestro webinar',
 
     },

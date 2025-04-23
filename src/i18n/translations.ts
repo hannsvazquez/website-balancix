@@ -20,7 +20,7 @@ export const translations = {
         'button.information': 'Más información',
 
         'title.resources': 'Noticias y Artículos',
-        'title.webinar':'Aprende más en nuestro webinar',
+        'title.webinar':'Únete al futuro del trabajo remoto en tech',
 
     },
     en: {
@@ -37,6 +37,6 @@ export const translations = {
         'button.information': 'More information',
         'title.resources': 'Free resources to keep learning',
 
-        'title.webinar': 'Learn more in our webinar recording',
+        'title.webinar': 'Join the future of remote work in tech',
     }
 };

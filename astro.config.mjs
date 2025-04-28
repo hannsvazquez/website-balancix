@@ -9,7 +9,7 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://balancix.site',
+  site: 'https://balancix-academy.com',
   integrations: [
     tailwind(),
     icon(),
@@ -40,7 +40,7 @@ export default defineConfig({
     defaultLocale: 'es',
     locales: ['es','en'],
     routing: {
-      prefixDefaultLocale: true,
+      prefixDefaultLocale: false,
     },
 
   }

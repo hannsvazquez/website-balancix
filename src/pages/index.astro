@@ -1,19 +1,35 @@
 ---
+import LanguageCard from '../components/LanguageCard.astro';
 ---
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Balancix</title>
+    <title>Choose Your Language | Balancix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/dist/icon-balancix.svg" />
     <script>
-      // Redirect immediately without showing a message
-      window.location.replace("/es/");
+      (function() {
+        // Get the browser language (first two characters)
+        const userLang = (navigator.language || '').toLowerCase().slice(0, 2);
+        
+        // Define supported languages
+        const supportedLangs = ['es', 'en'];
+        
+        // Redirect only if language is supported
+        if (supportedLangs.includes(userLang)) {
+          window.location.replace(`/${userLang}/`);
+        }
+        // Otherwise, the language selection page will be shown
+      })();
     </script>
-    <!-- Fallback meta refresh -->
-    <meta http-equiv="refresh" content="0;url=/es/" />
   </head>
-  <body>
-    <!-- This content will only show for a split second or if JavaScript is disabled -->
-    <a href="/es/" style="display:none">Continue to Balancix</a>
+  <body class="bg-background">
+    <LanguageCard 
+      title="Welcome to Balancix"
+      description="We are an international startup from day 0, that's why we create an English and Spanish version."
+      teamLabel="Team Balancix"
+    />
   </body>
 </html>

@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import formatDate from "@/utils/formatDate"; 
+import AuthorCard from "@components/AuthorCard.astro";
 
 
 export async function getStaticPaths() {
@@ -56,6 +57,9 @@ const { Content,remarkPluginFrontmatter } = await post.render();
 
     <div class="prose prose-lg prose-invert max-w-none">
       <Content />
+    </div>
+    <div class="w-full md:w-max mx-auto">
+      <AuthorCard/>
     </div>
   </main>
 </Layout>

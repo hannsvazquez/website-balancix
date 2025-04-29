@@ -7,9 +7,9 @@ description: "MyWorkIn users will have exclusive access to our training programs
 slug: "myworkin-and-balancix-partnership"
 isPublish: True
 ---
-![Special partnership My WorkIn and Balancix.](/public/blog-imgs/Alianza%20estrategica.png)
+![Special partnership My WorkIn and Balancix.](/blog-imgs/alianza-estrategica.png)
 
-At [Balancix](https://www.balancix.site/en/) we have the firm conviction that in order to build a prosperous Latin America with high-impact technology companies, not only more capital investment is required, but also the development of talents that will lead emerging startups in this new era of Artificial Intelligence. With this vision, we have explored various strategies to promote our pre-recruitment preparation system designed for startups to reach more university students, considering that in many regions there is little diffusion of these opportunities. Therefore, starting today we will establish strategic alliances with startups, government entities and even Venture Capital funds to expand our offer to new horizons.
+At [Balancix](https://www.balancix-academy.com/) we have the firm conviction that in order to build a prosperous Latin America with high-impact technology companies, not only more capital investment is required, but also the development of talents that will lead emerging startups in this new era of Artificial Intelligence. With this vision, we have explored various strategies to promote our pre-recruitment preparation system designed for startups to reach more university students, considering that in many regions there is little diffusion of these opportunities. Therefore, starting today we will establish strategic alliances with startups, government entities and even Venture Capital funds to expand our offer to new horizons.
 
 ## Why are we partnerig with MyWorkIn?
 
@@ -22,7 +22,7 @@ The main benefit of this collaboration is the optimization of time in the evalua
 
 This strategic partnership also allows us to expand our network of mentors and raise the quality of our programs thanks to the participation of experienced professionals who are currently working in important startups in Peru and the Latin America region. No doubt, more surprises and benefits are in store for our student community.
 
-If you consider that your university, company or public institution could establish a similar alliance with us, do not hesitate to contact us at balancix3@gmail.com. We will evaluate every proposal carefully.
+If you consider that your university, company or public institution could establish a similar alliance with us, do not hesitate to contact us at hann@balancix-academy.com. We will evaluate every proposal carefully.
 
 See you next week with more news and valuable content for your professional development in the startup ecosystem.
 

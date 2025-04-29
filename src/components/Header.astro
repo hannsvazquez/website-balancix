@@ -20,13 +20,13 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
           <a href={`/${lang}/#home`}>{translations[lang]["nav.home"]}</a>
         </li>
         <li>
-          <a href="/#prices">{translations[lang]["nav.pricing"]}</a>
+          <a href={`/${lang}/#prices`}>{translations[lang]["nav.pricing"]}</a>
         </li>
         <li>
           <a href={`/${lang}/posts`}>{translations[lang]["nav.blog"]}</a>
         </li>
         <li>
-          <a href="/#faq">{translations[lang]["nav.faq"]}</a>
+          <a href={`/${lang}/#faq`}>{translations[lang]["nav.faq"]}</a>
           <li>
             <a
               href='https://www.youtube.com/watch?v=Ao3Qbpv8-x4'

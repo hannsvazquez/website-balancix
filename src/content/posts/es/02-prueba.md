@@ -7,7 +7,7 @@ description: "Los usuarios de MyWorkIn contarán con acceso exclusivo a nuestros
 slug: "myworkin-y-balancix-alianza-estrategica"
 isPublish: True
 ---
-![Alianza estratégica entre My WorkIn y Balancix.](/public/blog-imgs/Alianza%20estrategica.png)
+![Alianza estratégica entre My WorkIn y Balancix.](/blog-imgs/alianza-estrategica.png)
 
 En **Balancix** tenemos la firme convicción de que para construir una Latinoamérica próspera con empresas tecnológicas de alto impacto, no solo se requiere mayor inversión de capital, sino también el desarrollo de talentos que liderarán las startups emergentes en esta nueva era de la Inteligencia Artificial. Con esta visión, hemos explorado diversas estrategias para que nuestra propuesta innovadora alcance a más estudiantes universitarios, considerando que en muchas regiones existe escasa difusión de estas oportunidades. Por ello, a partir de hoy estableceremos alianzas estratégicas con startups, entidades gubernamentales e incluso fondos de Venture Capital para expandir nuestra oferta hacia nuevos horizontes.
 
@@ -24,7 +24,7 @@ El beneficio principal de esta colaboración es la optimización de tiempos en l
 Esta alianza estratégica nos permite además expandir nuestra red de mentores y elevar la calidad de nuestros programas gracias a la participación de profesionales experimentados que actualmente se desempeñan en importantes startups de Perú y la región. Sin duda, se avecinan más sorpresas y beneficios para nuestra comunidad estudiantil.
 
 ```
-Si consideras que tu universidad, empresa o institución pública podría establecer una alianza similar con nosotros, no dudes en contactarnos a balancix3@gmail.com. Evaluaremos con interés cada propuesta recibida.
+Si consideras que tu universidad, empresa o institución pública podría establecer una alianza similar con nosotros, no dudes en contactarnos a hann@balancix-academy.com. Evaluaremos con interés cada propuesta recibida.
 ```
 
 Nos vemos la próxima semana con más novedades y contenido de valor para tu desarrollo profesional en el ecosistema de startups.

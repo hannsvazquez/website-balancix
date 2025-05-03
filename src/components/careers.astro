@@ -1,0 +1,46 @@
+---
+const careers = {
+    role01: "Customer Success Engineer",
+    role02: "Business Developer",
+    role03: "Product Marketing",
+    role04: "Talent Acquisition",
+}
+
+const roleList = Object.values(careers);
+---
+<section class="relative max-w-[1440px] px-8 py-12 mb-12 flex flex-col items-center justify-center">
+    <!-- Gradient background similar to other sections -->
+    <div
+        class="mx-auto -z-10 absolute aspect-square blur-3xl top-0 left-0 max-w-5xl rounded-full -translate-x-1/4 w-[55%] md:w-[25%] bg-primary/40"
+        aria-hidden="true"
+    >
+    </div>
+
+    <span class="text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">
+        Roles en alta demanda
+    </span>
+    
+    <h2 class="mt-8 text-3xl font-normal tracking-tight text-white text-balance mb-16">
+        Prepárate para empezar a trabajar como <span class='text-secondary font-bold'>:<span />
+    </h2>
+
+    <div class="overflow-x-auto scrollbar-hide w-full flex justify-center mb-8">
+        <div class="inline-flex space-x-4 px-4 md:px-0 min-w-max justify-center">
+            {roleList.map((role) => (
+                <button class="px-6 py-3 text-sm font-semibold text-white transition-all border rounded-lg hover:text-indigo-100 border-[#7883A8] uppercase">
+                    {role}
+                </button>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>

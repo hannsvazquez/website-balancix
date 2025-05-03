@@ -12,24 +12,13 @@ type Price = {
 
 const prices: Price[] = [
   {
-    price: '39.99',
-    title: 'Balancix Started ',
+    price: '30.00',
+    title: 'Para estudiantes',
     duration: '4 meses',
     offers: [
-      'Clases con profesionales del sector tech',
-      'Acceso a herramientas y retos semanales',
-      'Preparación y generación de entrevistas con startups',
-      'Acompañamiento personalizado',
-    ]
-  },
-  {
-    price: '59.90',
-    title: 'Balancix Global ',
-    duration: '4 meses',
-    offers: [
-      'Todo de Balancix Started',
-      'Preparación intensiva en inglés para startups',
-      'Generación de entrevistas con startups de USA'
+      'Acceso premium a herramientas como HubSpot, Clay.com, Recruit CRM, BambooHR y SimilarWeb',
+      'Contacto directo con más de 200 empresas remote first',
+      'Eventos exclusivos como Office Hours y Conversatorios en inglés.'
     ],
     isBetterPrice: true
   }
@@ -54,11 +43,11 @@ const prices: Price[] = [
       >
         <span class='text-secondary font-bold'>Invierte en el futuro de tu carrera.</span>
         <br />
-        Obtén un 10% de dsct. si eres usuario de MyWorkIn.
+        Obtén un 10% de dsct. con MyWorkIn
       </h2>
     </div>
     <div
-      class='grid grid-cols-1 mt-16 -mx-4 gap-y-10 sm:mx-auto lg:max-w-none md:grid-cols-2 lg:grid-cols-2 gap-x-4 lg:-mx-8'
+      class='grid grid-cols-1 mt-16 -mx-4 gap-y-10 sm:mx-auto lg:max-w-none md:grid-cols-1 lg:grid-cols-1 gap-x-4 lg:-mx-8 place-items-center'
     >
       {prices.map((price) => <CardPrice {...price} />)}
     </div>

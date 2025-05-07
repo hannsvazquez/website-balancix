@@ -1,4 +1,8 @@
 ---
+import { translations } from "../i18n/translations.ts";
+
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 const careers = {
     role01: "Customer Success Engineer",
     role02: "Business Developer",
@@ -17,11 +21,11 @@ const roleList = Object.values(careers);
     </div>
 
     <span class="text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">
-        Roles en alta demanda
+        {translations[lang]["career.title"]}
     </span>
     
     <h2 class="mt-8 text-3xl font-normal tracking-tight text-white text-balance mb-16">
-        Prepárate para empezar a trabajar como <span class='text-secondary font-bold'>:<span />
+        {translations[lang]["career.subtitle"]} <span class='text-secondary font-bold'>:<span />
     </h2>
 
     <div class="overflow-x-auto scrollbar-hide w-full flex justify-center mb-8">

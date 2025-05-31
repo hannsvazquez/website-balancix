@@ -1,3 +1,8 @@
+---
+import { translations } from "../i18n/translations.ts"
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
+---
 <section class='relative overflow-hidden border-t border-white/5'>
   <div class='relative px-8 py-12 mx-auto max-w-[1440px] md:px-12 lg:px-32 lg:py-24'>
     <div
@@ -5,7 +10,7 @@
     >
       <div class='text-center'>
         <p class='text-3xl font-normal tracking-tight text-white'>
-          ¿Aún no sabes en qué posición especializarte?
+          {translations[lang]["cta.main"]}
         </p>
         <p class='mt-4 text-base text-vulcan-300'>
           No te preocupes, puedes agendar una llamada gratuita con nuestro equipo para brindarte una asesoría de los roles que más se ajustan a tu perfil y preferencias.

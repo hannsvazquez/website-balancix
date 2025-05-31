@@ -1,6 +1,9 @@
 ---
 import CardPrice from './CardPrice.astro'
 import LinesBackground from './LinesBackground.astro'
+import { translations } from "../i18n/translations.ts"
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 
 type Price = {
   title: string
@@ -36,7 +39,7 @@ const prices: Price[] = [
     <div class='text-center max-w-2xl mx-auto'>
       <span
         class='text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text'
-        >Precios
+        >{translations[lang]["pricing.title"]}
       </span>
       <h2
         class='mt-8 text-3xl font-normal tracking-tight text-balance text-white'

@@ -1,6 +1,9 @@
 ---
 import Card from './Card.astro'
 import LinesBackground from './LinesBackground.astro'
+import { translations } from "../i18n/translations.ts"
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 
 type Step = {
   number: string
@@ -51,7 +54,7 @@ const dataSteps: Step[] = [
   <LinesBackground />
   <span
     class='text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text px-5'
-    >Empezar
+    >{translations[lang]["steps.title"]}
   </span>
   <div class='max-w-5xl grid gap-4 md:grid-cols-3 sm:grid-cols-2'>
     {

@@ -20,7 +20,8 @@ export const translations = {
         'button.information': 'Más información',
 
         'title.resources': 'Noticias y Artículos',
-        'title.webinar':'Únete al futuro del trabajo remoto en tech',
+
+        'title.reviews':'¿Por qué es importante Balancix?',
 
         'career.title': 'Roles en alta demanda',
         'career.subtitle': 'Prepárate para trabajar como:',
@@ -32,6 +33,7 @@ export const translations = {
 
         'pricing.title': 'Precios',
         'cta.main': '¿Aún no sabes en qué posición especializarte?',
+        'cta.description': 'No te preocupes, puedes agendar una llamada gratuita con nuestro equipo para brindarte una asesoría de los roles que más se ajustan a tu perfil y preferencias.',
 
     },
     en: {
@@ -48,10 +50,10 @@ export const translations = {
         'button.information': 'More information',
         'title.resources': 'Free resources to keep learning',
 
-        'title.webinar': 'Join the future of remote work in tech',
+        'title.reviews': 'Why Balancix?',
 
         'career.title': 'High-demand roles in startups',
-        'career.subtitle': 'Get ready to work as:',
+        'career.subtitle': 'Get ready to work as',
 
         'review.1': "Balancix's mission is to bridge the gap between university education and current job market demands. We seek to enable more young people to access opportunities in the tech industry with competitive salaries and work-life balance, all under the modality of working from anywhere in the world.",
         'review.2': "Balancix is an innovative Peruvian initiative with a totally practical approach to preparing students for the most in-demand positions in the tech sector. What I really highlight is their network of contacts in the startup world, which provides a great advantage to those looking to start their professional career in this sector that offers a lot of flexibility but at the same time with great challenges.",
@@ -60,5 +62,6 @@ export const translations = {
         'pricing.title': 'Pricing',
 
         'cta.main': 'Still not sure where you can start?',
+        'cta.description': 'Not to worry. You can schedule a free call with our team to get advice on the roles that best suit your profile and preferences.',
     }
 };

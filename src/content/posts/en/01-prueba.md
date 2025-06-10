@@ -8,7 +8,7 @@ slug: "start-your-career-in-a-startup"
 isPublish: true
 ---
 
-![group of university students talking each other.](/blog-imgs/working-remotely.webp)
+![Student working for a remote startup.](/blog-imgs/startups-remotas.png)
 
 Welcome to the **Balancix** blog, the space where we help you discover how to take your first steps in the professional world with opportunities that truly add value to your future. Whether you're technically skilled or not, with Balancix you can have the chance to enter the fascinating world of startups.
 

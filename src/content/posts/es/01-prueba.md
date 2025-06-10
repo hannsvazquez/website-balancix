@@ -8,7 +8,7 @@ slug: "empezar-tu-carrera-en-una-startup"
 isPublish: true
 ---
 
-![Trabajando desde una cafetería.](/blog-imgs/working-remotely.webp)
+![Estudiante trabajando remoto para una startup.](/blog-imgs/startups-remotas.png)
 
 Bienvenid@ al blog de **Balancix**, el espacio donde te ayudamos a descubrir cómo dar tus primeros pasos en el mundo laboral con oportunidades que realmente suman a tu futuro, ya sea si eres o no una persona técnica, con Balancix puedes tener la posibilidad de ingresar al fascinante mundo de las startups.
 

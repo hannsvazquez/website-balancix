@@ -8,7 +8,7 @@ slug: "estrategias-para-tu-busqueda-laboral"
 isPublish: true
 ---
 
-![Estrategias efectivas para conseguir empleo](/blog-imgs/asesoria-laboral-compress.jpeg)
+![Asesoría para conseguir empleo en este 2025](/blog-imgs/asesoria-laboral.jpg)
 
 ## ¿Cuáles son las estrategias más efectivas en este 2025?
 
@@ -33,7 +33,9 @@ A continuación, te listamos los principales pasos de la estrategia que usó Jul
 
 Luego de haber seguido estos pasos, Julia comenzó a recibir cientos de comentarios y reacciones, pero entre ellos estaba el mensaje más importante: Uno de los managers de Shopify le prometió que iban a encontrar la manera de crear este rol para que pueda ser entrevistada por el área de marketing al día siguiente.
 
-Para mayor detalle de esta historia, puedes visitar su canal de YouTube. [@JuliaFedorin](https://www.youtube.com/@juliafedorin)
+Para mayor detalle de esta historia, puedes revisar el episodio número 01 del podcast de Balancix, donde Julia nos pudo contar más detalles sobre el proceso creativo de crear este video viral. [(Mirar el video completo aquí)](https://www.youtube.com/watch?v=RrGYSWtgoDA)
+
+
 
 ## Caso John Hu y Alex Hormozi
 

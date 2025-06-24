@@ -1,3 +1,7 @@
+type TranslationDict = {
+    [key:string]: string;
+};
+
 export const language = {
     es: 'Español',
     en: 'English',
@@ -5,7 +9,7 @@ export const language = {
 
 export const defaultLang = 'es';
 
-export const translations = {
+export const translations:Record<string, TranslationDict> = {
     es: {
         'nav.home': 'Inicio',
         'nav.pricing': 'Precios',
@@ -30,8 +34,13 @@ export const translations = {
         'review.2': 'Balancix es una iniciativa peruana innovadora, con un enfoque totalmente práctico para preparar a los estudiantes en las posiciones más demandadas del sector tech. Lo que realmente destaco es su red de contactos en el mundo de las startups, lo que brinda una gran ventaja a quienes buscan empezar su carrera profesional en este sector que brinda mucha flexibilidad pero a la vez con grandes retos.',
 
         'steps.title': 'Empezar',
+        'steps.first.step': 'Agenda una llamada',
+        'steps.second.step': 'Paga tu suscripción',
+        'steps.third.step': 'Accede a la comunidad',
 
         'pricing.title': 'Precios',
+        'pricing.description':'Plan Balancix Global',
+        'pricing.span': 'para estudiantes ambiciosos',
         'cta.main': '¿Aún no sabes en qué posición especializarte?',
         'cta.description': 'No te preocupes, puedes agendar una llamada gratuita con nuestro equipo para brindarte una asesoría de los roles que más se ajustan a tu perfil y preferencias.',
 
@@ -59,7 +68,13 @@ export const translations = {
         'review.2': "Balancix is an innovative Peruvian initiative with a totally practical approach to preparing students for the most in-demand positions in the tech sector. What I really highlight is their network of contacts in the startup world, which provides a great advantage to those looking to start their professional career in this sector that offers a lot of flexibility but at the same time with great challenges.",
 
         'steps.title': 'Get Started Now',
+        'steps.first.step': 'Book a Free Call',
+        'steps.second.step': 'Complete the payment',
+        'steps.third.step': 'Get access to the community',
+
         'pricing.title': 'Pricing',
+        'pricing.description': 'Balancix Global Plan',
+        'pricing.span': 'for ambitious students',
 
         'cta.main': 'Still not sure where you can start?',
         'cta.description': 'Not to worry. You can schedule a free call with our team to get advice on the roles that best suit your profile and preferences.',

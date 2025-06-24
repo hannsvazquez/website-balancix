@@ -1,9 +1,10 @@
 ---
 import Card from './Card.astro'
 import LinesBackground from './LinesBackground.astro'
-import { translations } from "../i18n/translations.ts"
+import { defaultLang, translations } from "../i18n/translations.ts"
 
 const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
+const t = (key: string): string => translations[lang]?.[key] || translations["es"][key] || key;
 
 type Step = {
   number: string
@@ -15,19 +16,19 @@ type Step = {
 const dataSteps: Step[] = [
   {
     number: '1',
-    title: 'Agenda una llamada',
+    title: t('steps.first.step'),
     description:
       'Programa una videollamada gratuita con uno de nuestros asesores',
     cta: true
   },
   {
     number: '2',
-    title: 'Paga tu suscripción',
+    title: t('steps.second.step'),
     description: 'Realiza el primer pago de $30 USD, mediante Stripe o Paypal.'
   },
   {
     number: '3',
-    title: 'Accede a la comunidad',
+    title: t('steps.third.step'),
     description:
       'Obtén acceso a nuestro grupo de Whop y empieza tu camino hacia el mundo el trabajo remoto en el extranjero.'
   }

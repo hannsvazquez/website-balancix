@@ -7,7 +7,6 @@ import Pillars from '@components/Pillars.astro'
 import Pricing from '@components/Pricing.astro'
 import Reviews from '@components/Reviews.astro'
 import Steps from '@components/Steps.astro'
-import Videos from '@components/Videos.astro'
 import PostCard from '@/components/PostCard.astro'
 import Careers from "@/components/careers.astro"
 
@@ -58,7 +57,7 @@ const posts = (await getCollection('posts'))
                   lang={lang}
                   publishedAt={post.data.publishedAt}
                   title={post.data.title}
-                  description={post.data.description}
+                  imgCard={post.data.imgCard}
                   slug={post.slug}
                 />
               ))

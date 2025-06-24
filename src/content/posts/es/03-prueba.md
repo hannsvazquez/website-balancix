@@ -2,6 +2,7 @@
 title: "¿Cómo prepararte para una entrevista de trabajo en inglés?"
 tags: ["#VocabularioInglés", "#EntrevistasEnInglés", "#HacksDeAprendizaje📚"]
 lang: "es"
+imgCard: "/blog-imgs/plan-de-preparacion-ingles.jpg"
 publishedAt: 2025-04-28
 description: "Si tu único impedimento para trabajar con empresas de USA o Europa es el dominio del idioma inglés, especialmente tu habilidad para hablar fluidamente, entonces nuestro plan de 8 semanas te ayudará a pasar de un nivel intermedio a avanzado con actividades variadas y que puedas incluir fácilmente en tu rutina diaria."
 slug: "entrevista-de-trabajo-en-ingles"

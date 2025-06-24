@@ -2,6 +2,7 @@
 title: "Estrategias que debes implementar en tu búsqueda laboral"
 tags: ["#internships","#empleabilidad", "#Shopify", "#Truora"]
 lang: "es"
+imgCard: "/blog-imgs/asesoria-laboral.jpg"
 publishedAt: 2025-05-06
 description: " Ante el cambiante mercado laboral que estamos viviendo producto del avance de la AI, te compartimos algunas estrategias e historias de éxito que te pueden servir de inspiración para planificar de mejor manera tu búsqueda laboral en este 2025."
 slug: "estrategias-para-tu-busqueda-laboral"

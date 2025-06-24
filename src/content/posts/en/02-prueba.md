@@ -2,6 +2,7 @@
 title: "My WorkIn and Balancix: together to help college student break into startups"
 tags: ["#remotework🌍","#internships🧑‍🎓", "#partnerships🤝"]
 lang: "en"
+imgCard: "/blog-imgs/alianza-estrategica.png"
 publishedAt: 2025-04-17
 description: "MyWorkIn users will have exclusive access to our training programs and connection with startups. This ratifies our commitment to help college students to start their careers in a dynamic and innovative environments. Read until the end, we have a great benefit."
 slug: "myworkin-and-balancix-partnership"

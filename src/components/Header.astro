@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { translations } from "../i18n/translations.ts";
-
+import Link from "./Link.astro";
 
 const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 
@@ -17,19 +17,19 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
     <nav class='hidden md:block'>
       <ul class='flex gap-4 items-center justify-center'>
         <li>
-          <a href={`/${lang}/#home`}>{translations[lang]["nav.home"]}</a>
+          <Link href={`/${lang}/#home`} label={translations[lang]["nav.home"]}/>
         </li>
         <li>
-          <a href={`/${lang}/#prices`}>{translations[lang]["nav.pricing"]}</a>
+          <Link href={`/${lang}/#prices`} label={translations[lang]["nav.pricing"]}/>
         </li>
         <li>
-          <a href={`/${lang}/posts`}>{translations[lang]["nav.blog"]}</a>
+          <Link href="#" label={translations[lang]["nav.companies"]}/>
         </li>
         <li>
-          <a href={`/${lang}/#faq`}>{translations[lang]["nav.faq"]}</a>
+          <Link href={`/${lang}/#faq`} label={translations[lang]["nav.faq"]}/>
           <li>
             <a
-              href='https://alvo.chat/68zR'
+              href='https://cal.com/hann-balancix/asesoria-gratis'
               target='_blank'
               class='py-2 px-5 bg-primary rounded-md text-accent font-semibold'
             >

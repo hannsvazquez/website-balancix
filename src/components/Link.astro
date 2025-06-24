@@ -16,12 +16,10 @@ const { label, isUnderline, ...props } = Astro.props;
 <a
   href={props.href}
   class:list={{
-    ["hover:text-neutral-300 cursor-pointer flex items-center gap-1"]: true,
+    ["cursor-pointer flex items-center gap-1 transition-colors duration-200 text-white hover:text-[#A3A1C5]"]: true,
     ["underline decoration-dashed underline-offset-8"]: isUnderline,
   }}
   {...props}
-  rel="noreferrer"
-  target="_blank"
 >
   {props.showIcon && <Icon name={props.icon}/>}
 

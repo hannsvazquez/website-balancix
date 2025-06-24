@@ -2,6 +2,7 @@
 title: "How to prepare for a job interview in English?"
 tags: ["#EnglishVocabulary", "#JobInterviews", "#LearningHacks📚"]
 lang: "en"
+imgCard: "/blog-imgs/plan-de-preparacion-ingles.jpg"
 publishedAt: 2025-04-28
 description: "This is your only guide to go from intermediate English speaker to advacend. Whether your are preparing for a future job interview or planning to study an MBA program in an English-speaking country, this program offers you practical activities to incorporate into your daily life."
 slug: "prepare-for-a-job-interview-in-english"

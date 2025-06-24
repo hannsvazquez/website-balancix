@@ -2,6 +2,7 @@
 title: "Why start your career in a startup?"
 tags: ["#remotework🌍","#internships🧑‍🎓", "#career-tips💡"]
 lang: "en"
+imgCard: "/blog-imgs/startups-remotas.png"
 publishedAt: 2025-04-04
 description: "Working for a startup as a recent graduate can have multiple benefits, from an accelerated learning curve to the opportunity to be part of developing products that will end up disrupting entire industries."
 slug: "start-your-career-in-a-startup"

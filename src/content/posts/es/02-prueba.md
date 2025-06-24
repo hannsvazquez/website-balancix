@@ -2,6 +2,7 @@
 title: "MyWorkIn y Balancix: Acelera tu proceso de preparación para trabajar en una startup"
 tags: ["#remotework🌍","#internships🧑‍🎓", "#alianzas🤝"]
 lang: "es"
+imgCard: "/blog-imgs/alianza-estrategica.png"
 publishedAt: 2025-04-17
 description: "Los usuarios de MyWorkIn contarán con acceso exclusivo a nuestros programas de formación y conexión con startups. Ratificando así nuestro compromiso de impulsar a jóvenes universitarios a iniciar sus carreras en entornos dinámicos y de constante innovación."
 slug: "myworkin-y-balancix-alianza-estrategica"

@@ -31,14 +31,14 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
   <!-- Content -->
   <div class='max-w-2xl flex justify-center items-center flex-col gap-6 z-10'>
     <h1 class='text-4xl font-bold text-center'>
-      {translations[lang]["hero.span"]}
-      <span class='text-secondary'>{translations[lang]["hero.title"]}</span>
+      {translations[lang]["hero.title"]}
+      <span class='text-secondary'>{translations[lang]["hero.span"]}</span>
     </h1>
     <p class='max-w-xl text-center text-gray-300'>
       {translations[lang]["hero.subtitle"]}
     </p>
     <div class='flex gap-2 items-center justify-center flex-wrap'>
-      <BtnPrimary text={translations[lang]["button.webinar"]} link="https://www.youtube.com/watch?v=Ao3Qbpv8-x4"/>
+      <BtnPrimary text={translations[lang]["button.hero.cta"]} link="https://whop.com/checkout/plan_w5DeYOGfVMslY?d2c=true"/>
       <a
         href='https://alvo.chat/68zR'
         target='_blank'

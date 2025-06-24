@@ -1,12 +1,26 @@
 ---
-import SocialLinks from "./SocialLinks.astro";
+import Link from "./Link.astro";
 ---
 
 <footer>
-  <div class='max-w-[1440px] flex items-center justify-center gap-3 flex-wrap px-8 py-12 text-center'>
-    <p class='text-sm text-gray-300'>
-      &copy; {new Date().getFullYear()} Balancix. Todos los derechos reservados.
-    </p>
-    <SocialLinks/>
+  <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between px-20 py-10 gap-8">
+    <!-- Left: Logo -->
+    <a href="/" class="flex-shrink-0 flex items-center justify-center">
+      <img src="/logo/icon-balancix.svg" alt="Balancix Logo" class="h-10 w-auto" />
+    </a>
+    <!-- Right: Navigation Links -->
+    <nav>
+      <ul class="flex flex-col md:flex-row gap-6 items-center justify-center">
+        <li>
+          <Link href="#" label="Balancix for startups" />
+        </li>
+        <li>
+          <Link href="https://calendly.com/hann-balancix-academy/balancix-discovery-call" label="Become a mentor" />
+        </li>
+        <li>
+          <Link href="/posts" label="Our Blog" />
+        </li>
+      </ul>
+    </nav>
   </div>
 </footer>

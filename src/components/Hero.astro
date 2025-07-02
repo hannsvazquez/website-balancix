@@ -1,6 +1,7 @@
 ---
 import BtnPrimary from "./BtnPrimary.astro";
 import LinesBackground from "./LinesBackground.astro";
+import ToggleReact from "./ToggleReact.jsx";
 
 import { translations } from "../i18n/translations.ts";
 
@@ -30,6 +31,9 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 
   <!-- Content -->
   <div class='max-w-2xl flex justify-center items-center flex-col gap-6 z-10'>
+    <div class="w-full mb-6">
+      <ToggleReact client:load onChange={() => {}} />
+    </div>
     <h1 class='text-4xl font-bold text-center'>
       {translations[lang]["hero.title"]}
       <span class='text-secondary'>{translations[lang]["hero.span"]}</span>

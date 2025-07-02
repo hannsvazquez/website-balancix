@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import { translations } from "../i18n/translations.ts";
 import Link from "./Link.astro";
+import Dropdown from "./dropdown.jsx";
 
 const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 
@@ -19,21 +20,27 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
         <li>
           <Link href={`/${lang}/#home`} label={translations[lang]["nav.home"]}/>
         </li>
+        <Dropdown client:load  label={translations[lang]["nav.solutions"]} options={[
+          {
+            label: translations[lang]["solutions.platform"],
+            href: "#"
+          },
+          {
+            label: translations[lang]["solutions.advisor"],
+            href:"#"
+          }
+        ]}/>
         <li>
-          <Link href={`/${lang}/#prices`} label={translations[lang]["nav.pricing"]}/>
-        </li>
-        <li>
-          <Link href="#" label={translations[lang]["nav.companies"]}/>
+          <Link href="#" label={translations[lang]["nav.mentors"]}/>
         </li>
         <li>
           <Link href={`/${lang}/#faq`} label={translations[lang]["nav.faq"]}/>
           <li>
             <a
-              href='https://cal.com/hann-balancix/asesoria-gratis'
-              target='_blank'
+              href='mailto:info@balancix-academy.com'
               class='py-2 px-5 bg-primary rounded-md text-accent font-semibold'
             >
-              Contáctanos
+              {translations[lang]["nav.contact"]}
             </a>
           </li>
         </li>
@@ -62,17 +69,15 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
     >
       <ul>
         <li class='mb-4'><a class='w-full block' href={`/${lang}/#home`}>{translations[lang]["nav.home"]}</a></li>
-        <li class='mb-4'><a class='w-full block' href='#prices'>{translations[lang]["nav.pricing"]}</a></li>
-        <li class='mb-4'>
-          <a class='w-full block' href='#faq'>{translations[lang]["nav.faq"]}</a>
-        </li>
+        <li class='mb-4'><a class='w-full block' href='#'>{translations[lang]["solutions.platform"]}</a></li>
+        <li class='mb-4'><a class='w-full block' href='#'>{translations[lang]["solutions.advisor"]}</a></li>
         <li class='mb-4'>
           <a
-            href='https://www.youtube.com/watch?v=Ao3Qbpv8-x4'
-            target='_blank'
+            href='mailto:info@balancix-academy.com'
             class='w-full block py-2 px-5 bg-primary rounded-md text-accent font-semibold'
-            >Webinar</a
           >
+            {translations[lang]["nav.contact"]}
+          </a>
         </li>
       </ul>
     </nav>
@@ -95,4 +100,6 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
     close.classList.add('hidden')
     burger.classList.remove('hidden')
   })
+
+  
 </script>

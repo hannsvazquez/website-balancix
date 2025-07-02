@@ -13,7 +13,8 @@ export default {
         info: '#a0aec0',
         success: '#16a34a',
         warning: '#f59e0b',
-        error: '#f43f5e'
+        error: '#f43f5e',
+        transparentToggle: '#232336',
       },
       animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite'
@@ -23,7 +24,15 @@ export default {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' }
         }
-      }
+      },
+      borderRadius: {
+        'none': '0',
+        'sm': '0.125rem',
+        'md': '0.375rem',
+        'lg': '0.5rem',
+        'large': '0.9rem',
+        'full': '9999px'
+      },
     }
   },
   plugins: [require("@tailwindcss/typography")],

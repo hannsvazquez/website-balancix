@@ -1,5 +1,9 @@
 ---
 import PillarItem from './PillarItem.astro'
+import { translations } from "../i18n/translations.ts";
+
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 
 type Pillar = {
   title: string
@@ -19,23 +23,23 @@ const pillars: Pillar[] = [
     icon: 'computer'
   },
   {
-    title: 'Fortalecimiento de la Comunicación',
-    description: 'Mejora tu inglés y habilidades de comunicación.',
-    icon: 'dialog'
+    title: 'Conoce más sobre tu industria',
+    description: 'Accede a mentorías con profesionales que ya conocen tu industria de interés',
+    icon: 'industry'
   },
   {
     title: 'Preparación para Entrevistas',
-    description: 'Estrategias para destacar en entrevistas tech.',
+    description: 'Estrategias para destacar en entrevistas para roles en startups.',
     icon: 'microphone'
   },
   {
     title: 'Conexión con Startups',
-    description: 'Accede a las mejores startups de LatAm y USA.',
+    description: 'Accede a las mejores startups de LatAm, USA, Europa y el resto del mundo.',
     icon: 'chart'
   },
   {
     title: 'Soporte Continuo',
-    description: 'Te acompañamos en todo el proceso.',
+    description: 'Te acompañamos y resolvemos cualquier duda durante todo el proceso.',
     icon: 'support'
   }
 ]
@@ -46,7 +50,7 @@ const pillars: Pillar[] = [
 >
   <span
     class='text-lg text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text px-5'
-    >Pilares
+    >{translations[lang]["advisor.title"]}
   </span>
   <div class='grid gap-6 lg:grid-cols-3 sm:grid-cols-2 md:py-8'>
     {

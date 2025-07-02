@@ -7,22 +7,20 @@ import tailwind from '@astrojs/tailwind';
 
 import icon from 'astro-icon';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://balancix-academy.com',
-  integrations: [
-    tailwind(),
-    icon(),
-    sitemap({
-      i18n: {
-        defaultLocale: 'es',
-        locales: {
-          en: 'en',
-          es: 'es'
-        }
+  integrations: [tailwind(), icon(), sitemap({
+    i18n: {
+      defaultLocale: 'es',
+      locales: {
+        en: 'en',
+        es: 'es'
       }
-    })
-  ],
+    }
+  }), react()],
   markdown: {
     syntaxHighlight: "shiki",
     shikiConfig: {

@@ -1,117 +1,87 @@
 ---
-type ItemPartner = {
+type Role = {
   name: string
-  logo: string
 }
 
-const dataPartners: ItemPartner[] = [
+const startupRoles: Role[] = [
   {
-    name: 'Beek',
-    logo: '/partners/beek.svg'
+    name: 'Customer Success Engineer'
   },
   {
-    name: 'Leadsales',
-    logo: '/partners/leadsales.svg'
+    name: 'Brand & Community'
   },
   {
-    name: 'Nulinga',
-    logo: '/partners/nulinga.svg'
+    name: 'Business Development'
   },
   {
-    name: 'nowports',
-    logo: '/partners/nowports.svg'
+    name: 'Product Marketing'
   },
   {
-    name: 'Kontempo',
-    logo: '/partners/kontempo-mx-logo.png'
+    name: 'Legal & Compliance'
   },
   {
-    name: 'Runa',
-    logo: '/partners/runa.webp'
+    name: 'Talent Acquisition'
   },
   {
-    name: 'Finkargo',
-    logo: '/partners/Finkargo.png'
+    name: 'Financial Analyst'
   },
   {
-    name: 'zubale',
-    logo: '/partners/zubale.svg'
+    name: 'Product Management'
+  },
+  {
+    name: 'Growth'
+  },
+  {
+    name: 'UX/UI Designer'
   }
 ]
+
+// Split roles into chunks of 4
+const roleChunks = [];
+for (let i = 0; i < startupRoles.length; i += 5) {
+  roleChunks.push(startupRoles.slice(i, i + 5));
+}
+
+import { translations } from "../i18n/translations.ts";
+
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
 ---
 
 <section
-  class='max-w-[1440px] flex flex-col justify-center bg-vulcan-900 border-white/5 border-y py-5 items-center gap-6 overflow-hidden'
+  class='max-w-[1440px] flex flex-col justify-center bg-vulcan-900 border-white/5 border-y py-5 items-center gap-10 overflow-hidden'
 >
-  <!-- <p>Inicia tu carrera en las top startups de LatAm</p> -->
-  <!-- Logo Carousel animation -->
-  <!-- <div class='w-full max-w-5xl mx-auto px-4 md:px-6 py-5'>
-    <div
-      class='w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]'
-    >
-      <ul
-        class='flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll'
-      >
-        {
-          dataPartners.map((partner) => (
-            <li>
-              <img
-                class='w-[130px] object-contain aspect-[2/1]'
-                src={partner.logo}
-                alt={partner.name}
-              />
-            </li>
-          ))
-        }
-      </ul>
-      <ul
-        class='flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll'
-        aria-hidden='true'
-      >
-        {
-          dataPartners.map((partner) => (
-            <li>
-              <img
-                class='w-[150px] object-contain aspect-[2/1]'
-                src={partner.logo}
-                alt={partner.name}
-              />
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </div> -->
+  <p>{translations[lang]["career.subtitle"]}</p>
   <div
     class='w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]'
   >
     <ul
-      class='flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll'
+      class='flex items-center justify-center md:justify-start [&_li]:mx-8 animate-infinite-scroll'
     >
       {
-        dataPartners.map((partner) => (
-          <li>
-            <img
-              class='w-[120px] object-contain aspect-[2/1]'
-              src={partner.logo}
-              alt={partner.name}
-            />
+        roleChunks.map((chunk) => (
+          <li class="flex gap-4">
+            {chunk.map((role) => (
+              <span class="text-white text-lg font-bold px-4 py-2 rounded-lg whitespace-nowrap">
+                {role.name}
+              </span>
+            ))}
           </li>
         ))
       }
     </ul>
     <ul
-      class='flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll'
+      class='flex items-center justify-center md:justify-start [&_li]:mx-8 animate-infinite-scroll'
       aria-hidden='true'
     >
       {
-        dataPartners.map((partner) => (
-          <li>
-            <img
-              class='w-[120px] object-contain aspect-[2/1]'
-              src={partner.logo}
-              alt={partner.name}
-            />
+        roleChunks.map((chunk) => (
+          <li class="flex gap-4">
+            {chunk.map((role) => (
+              <span class="text-white text-lg font-bold px-4 py-2 rounded-lg whitespace-nowrap">
+                {role.name}
+              </span>
+            ))}
           </li>
         ))
       }

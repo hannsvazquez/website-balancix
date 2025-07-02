@@ -12,9 +12,13 @@ export const defaultLang = 'es';
 export const translations:Record<string, TranslationDict> = {
     es: {
         'nav.home': 'Inicio',
-        'nav.pricing': 'Precios',
-        'nav.companies': 'Para Empresas',
+        'nav.solutions': 'Soluciones',
+        'nav.mentors': 'Mentores',
+        'nav.contact': 'Contacto',
         'nav.faq': 'Preguntas Frecuentes',
+
+        'solutions.platform': 'Plataforma',
+        'solutions.advisor': 'Asesorías',
 
         'hero.span': 'en Startups Globales',
         'hero.title': 'Consigue Prácticas',
@@ -25,32 +29,35 @@ export const translations:Record<string, TranslationDict> = {
 
         'title.resources': 'Noticias y Artículos',
 
-        'title.reviews':'¿Por qué es importante Balancix?',
+        'title.reviews':'Nuestra Misión',
 
         'career.title': 'Roles en alta demanda',
         'career.subtitle': 'Prepárate para trabajar como:',
 
-        'review.1': 'La misión de Balancix es cerrar la brecha entre la formación universitaria y las demandas del mercado laboral actual. Buscamos que más jóvenes accedan a oportunidades en la industria tech con salarios competitivos y un equilibrio entre el trabajo y vida personal, todo bajo la modalidad de trabajar desde cualquier parte del mundo.',
-        'review.2': 'Balancix es una iniciativa peruana innovadora, con un enfoque totalmente práctico para preparar a los estudiantes en las posiciones más demandadas del sector tech. Lo que realmente destaco es su red de contactos en el mundo de las startups, lo que brinda una gran ventaja a quienes buscan empezar su carrera profesional en este sector que brinda mucha flexibilidad pero a la vez con grandes retos.',
 
-        'steps.title': 'Empezar',
-        'steps.first.step': 'Agenda una llamada',
-        'steps.second.step': 'Paga tu suscripción',
-        'steps.third.step': 'Accede a la comunidad',
+        'steps.title': '¿Cómo funciona?',
+        'steps.first.step': 'Crea una cuenta',
+        'steps.second.step': 'Descubre tu internship ideal',
+        'steps.third.step': 'Postula o solicita una asesoría',
 
-        'pricing.title': 'Precios',
-        'pricing.description':'Plan Balancix Global',
-        'pricing.span': 'para estudiantes ambiciosos',
         'cta.main': '¿Aún no sabes en qué posición especializarte?',
         'cta.description': 'No te preocupes, puedes agendar una llamada gratuita con nuestro equipo para brindarte una asesoría de los roles que más se ajustan a tu perfil y preferencias.',
 
+        // Mission section
+        'mission.phrase': 'Generar oportunidades globales en startups para que los estudiantes puedan acceder a empleos de mejor calidad y puedan ser parte de soluciones innovadoras',
+
+        'advisor.title': 'Asesorías'
     },
     en: {
         'nav.home': 'Home',
-        'nav.pricing': 'Pricing',
-        'nav.companies': 'For Companies',
+        'nav.solutions': 'Solutions',
+        'nav.mentors': 'Mentors',
+        'nav.contact': 'Contact Us',
         'nav.faq': 'FAQ',
-        
+
+        'solutions.platform': 'Platform',
+        'solutions.advisor': 'Career Advisor',
+
         'hero.span': 'at global startups',
         'hero.title': 'Land remote internships',
         'hero.subtitle':'We prepare you with the best resources in the industry to accelerate your break into the startup world.',
@@ -59,24 +66,25 @@ export const translations:Record<string, TranslationDict> = {
         'button.information': 'More information',
         'title.resources': 'Free resources to keep learning',
 
-        'title.reviews': 'Why Balancix?',
+        'title.reviews': 'Our Mission',
 
         'career.title': 'High-demand roles in startups',
         'career.subtitle': 'Get ready to work as',
 
-        'review.1': "Balancix's mission is to bridge the gap between university education and current job market demands. We seek to enable more young people to access opportunities in the tech industry with competitive salaries and work-life balance, all under the modality of working from anywhere in the world.",
-        'review.2': "Balancix is an innovative Peruvian initiative with a totally practical approach to preparing students for the most in-demand positions in the tech sector. What I really highlight is their network of contacts in the startup world, which provides a great advantage to those looking to start their professional career in this sector that offers a lot of flexibility but at the same time with great challenges.",
+    
 
-        'steps.title': 'Get Started Now',
-        'steps.first.step': 'Book a Free Call',
-        'steps.second.step': 'Complete the payment',
-        'steps.third.step': 'Get access to the community',
+        'steps.title': 'How it works?',
+        'steps.first.step': 'Create an account',
+        'steps.second.step': 'Discover your dream internship',
+        'steps.third.step': 'Apply or ask for a consultation',
 
-        'pricing.title': 'Pricing',
-        'pricing.description': 'Balancix Global Plan',
-        'pricing.span': 'for ambitious students',
 
         'cta.main': 'Still not sure where you can start?',
         'cta.description': 'Not to worry. You can schedule a free call with our team to get advice on the roles that best suit your profile and preferences.',
+
+        
+        'mission.phrase': 'Generate global opportunities in startups so that students can access better quality jobs and be part of innovative solutions.',
+
+        'advisor.title': 'Career Advisor Service'
     }
 };

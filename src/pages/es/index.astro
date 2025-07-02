@@ -2,14 +2,11 @@
 import CTA from '@components/CTA.astro'
 import FAQ from '@components/FAQ.astro'
 import Hero from '@components/Hero.astro'
-import Parners from '@components/Partners.astro'
+import Partners from '@components/Partners.astro'
 import Pillars from '@components/Pillars.astro'
-import Pricing from '@components/Pricing.astro'
-import Reviews from '@components/Reviews.astro'
+import OurMission from '@components/OurMission.astro'
 import Steps from '@components/Steps.astro'
-import Videos from '@components/Videos.astro'
 import PostCard from '@/components/PostCard.astro'
-import Careers from "@components/careers.astro"
 
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
@@ -29,12 +26,10 @@ const posts = (await getCollection("posts"))
 
 <Layout title='Consigue prácticas remotas en startups'>
   <Hero />
-  <Parners />
-  <Careers />
-  <Reviews />
+  <Partners />
+  <OurMission />
   <Steps />
   <Pillars />
-  <Pricing />
   <CTA />
   <FAQ />
   <section class='relative'>

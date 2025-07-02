@@ -40,8 +40,8 @@ export const translations:Record<string, TranslationDict> = {
         'steps.second.step': 'Descubre tu internship ideal',
         'steps.third.step': 'Postula o solicita una asesoría',
 
-        'cta.main': '¿Aún no sabes en qué posición especializarte?',
-        'cta.description': 'No te preocupes, puedes agendar una llamada gratuita con nuestro equipo para brindarte una asesoría de los roles que más se ajustan a tu perfil y preferencias.',
+        'cta.main': 'El mejor momento para unirte a una startup, es HOY!',
+        'cta.description': 'Sé parte de nuestra comunidad de estudiantes que buscan prepararse para ingresar a las startups más innovadoras del mundo',
 
         // Mission section
         'mission.phrase': 'Generar oportunidades globales en startups para que los estudiantes puedan acceder a empleos de mejor calidad y puedan ser parte de soluciones innovadoras',
@@ -79,8 +79,8 @@ export const translations:Record<string, TranslationDict> = {
         'steps.third.step': 'Apply or ask for a consultation',
 
 
-        'cta.main': 'Still not sure where you can start?',
-        'cta.description': 'Not to worry. You can schedule a free call with our team to get advice on the roles that best suit your profile and preferences.',
+        'cta.main': 'The best time to work for a startup, is TODAY!',
+        'cta.description': 'Be part of our community of students preparing to join the most disruptive startups in the world.',
 
         
         'mission.phrase': 'Generate global opportunities in startups so that students can access better quality jobs and be part of innovative solutions.',

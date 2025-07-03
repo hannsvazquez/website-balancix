@@ -1,0 +1,23 @@
+---
+import FAQ from '@components/FAQ.astro'
+import Partners from '@components/Partners.astro'
+import OurMission from '@components/OurMission.astro'
+import HeroCompanies from '@components/HeroCompanies.astro'
+
+
+import Layout from '@layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+
+import { translations } from "../../i18n/translations.ts";
+
+
+const lang = "es";
+---
+
+<Layout title='Balancix Academy | Para Empresas'>
+  <HeroCompanies />
+  <Partners />
+  <OurMission />
+  <FAQ />
+
+</Layout>

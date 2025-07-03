@@ -1,5 +1,9 @@
 ---
 import LinesBackground from './LinesBackground.astro'
+import { defaultLang, translations } from "../i18n/translations.ts"
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
+const t = (key: string): string => translations[lang]?.[key] || translations["es"][key] || key;
 
 type Faq = {
   question: string
@@ -8,30 +12,20 @@ type Faq = {
 
 const faqs: Faq[] = [
   {
-    question: '¿Cuáles son los beneficios de suscribirme a Balancix?',
-    answer:
-      'Tendrás acceso a una gran variedad de recursos especializados: desde guías especializadas hasta clases en vivo, hechas por expertos que actualmente laboran en el mundo de las startups y scaleups.'
+    question: t('faq.first.question'),
+    answer: t('faq.first.response')
   },
   {
-    question:
-      '¿Necesito tener un nivel avanzado de inglés?',
-    answer:
-      'Hoy en día es fundamental que tengas un nivel B2 (intermedio alto) en adelante, tanto escrito como verbal. En caso no lo tengas, puedes preguntar por nuestras clases personalizadas enfocado 100% en el ámbito profesional.'
+    question: t('faq.second.question'),
+    answer: t('faq.second.response')
   },
   {
-    question: '¿Qué medios de pago aceptan?',
-    answer:
-      'Puedes pagar tu suscripción a Balancix mediante tarjeta de crédito y débito. Para estudiantes de Perú, también aceptamos Yape o Plin'
+    question: t('faq.third.question'),
+    answer: t('faq.third.response')
   },
   {
-    question: '¿Cuáles son los horarios de las clases en vivo?',
-    answer:
-      'Los horarios pueden variar según la disponibilidad de nuestros mentores / coach, pero mayormente es un horario nocturno. Es algo que sin duda queremos mejorar. Pronto tendrás más novedades!'
-  },
-  {
-    question: '¿En qué áreas y roles se especializan?',
-    answer:
-      'Por ahora sólo nos enfocamos en áreas relacionadas más a la parte de negocio como Sales, Marketing, Customer Success y Talent Acquisition. Esto es perfecto para estudiantes de carreras como Negocios Internacionales, Administración de empresas, Psicología, etc.'
+    question: t('faq.fourth.question'),
+    answer: t('faq.fourth.response')
   }
 ]
 ---
@@ -44,10 +38,10 @@ const faqs: Faq[] = [
       <p
         class='text-sm text-transparent uppercase bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text'
       >
-        FAQ
+        {translations[lang]['faq.heading']}
       </p>
       <p class='mx-auto mt-4 text-base text-gray-300'>
-        Resuelve tus dudas sobre programas, horarios y pagos en nuestras preguntas frecuentes.
+        {translations[lang]['faq.subheading']}
       </p>
     </div>
     <div class='relative mt-10'>

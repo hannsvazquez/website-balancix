@@ -1,0 +1,35 @@
+---
+import CardDescription from './CardDescription.astro';
+import ToggleReact from './ToggleReact.tsx';
+import { translations } from '../i18n/translations.ts';
+
+const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
+---
+<div class="flex flex-col items-center justify-center min-h-[70vh] py-12">
+  <div class="w-full mb-10 pt-8 md:pt-20 px-4 z-20 relative">
+    <ToggleReact
+
+      client:load 
+
+      options={[
+        translations[lang]["toggle.student"],
+        translations[lang]["toggle.company"]
+      ]}
+      links={[
+        lang === "en" ? "/en/" : "/es/",
+        lang === "en" ? "/en/ForCompanies" : "/es/ForCompanies"
+      ]}
+      defaultSelected={1}
+      onChange={() => {}}
+    />
+  </div>
+  <h1 class="text-4xl md:text-5xl font-bold text-center text-white mb-6">
+    {translations[lang]["forcompanies.title"]} <br/> <span class="text-[#A6A3D6]">{translations[lang]["forcompanies.span"]}</span>
+  </h1>
+  <CardDescription
+    title={translations[lang]["forcompanies.subtitle"]}
+    description={translations[lang]["forcompanies.description"]}
+    imageSrc="/group-of-interns.png"
+    imageAlt="Group of interns"
+  />
+</div>

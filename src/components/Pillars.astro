@@ -4,6 +4,7 @@ import { translations } from "../i18n/translations.ts";
 
 
 const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
+const t = (key: string): string => translations[lang]?.[key] || translations["es"][key] || key;
 
 type Pillar = {
   title: string
@@ -13,33 +14,33 @@ type Pillar = {
 
 const pillars: Pillar[] = [
   {
-    title: 'Desarrollo Integral de Habilidades',
-    description: 'Formación completa en habilidades técnicas y blandas.',
+    title: t('pillars.first.title'),
+    description: t('pillars.first.description'),
     icon: 'gear'
   },
   {
-    title: 'Dominio de Herramientas Técnicas',
-    description: 'Aprende las herramientas más demandadas del sector.',
+    title: t('pillars.second.title'),
+    description: t('pillars.second.description'),
     icon: 'computer'
   },
   {
-    title: 'Conoce más sobre tu industria',
-    description: 'Accede a mentorías con profesionales que ya conocen tu industria de interés',
+    title: t('pillars.third.title'),
+    description: t('pillars.third.description'),
     icon: 'industry'
   },
   {
-    title: 'Preparación para Entrevistas',
-    description: 'Estrategias para destacar en entrevistas para roles en startups.',
+    title: t('pillars.four.title'),
+    description: t('pillars.four.description'),
     icon: 'microphone'
   },
   {
-    title: 'Conexión con Startups',
-    description: 'Accede a las mejores startups de LatAm, USA, Europa y el resto del mundo.',
+    title: t('pillars.fifth.title'),
+    description: t('pillars.fifth.description'),
     icon: 'chart'
   },
   {
-    title: 'Soporte Continuo',
-    description: 'Te acompañamos y resolvemos cualquier duda durante todo el proceso.',
+    title: t('pillars.sixth.title'),
+    description: t('pillars.sixth.description'),
     icon: 'support'
   }
 ]

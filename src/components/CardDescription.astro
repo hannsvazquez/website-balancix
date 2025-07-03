@@ -1,0 +1,17 @@
+---
+// Props: title, subtitle, description, imageSrc, imageAlt
+const { title, subtitle, description, imageSrc, imageAlt } = Astro.props;
+---
+<div class="flex flex-col md:flex-row rounded-3xl bg-[#23222C] bg-opacity-80 shadow-lg overflow-hidden max-w-3xl mx-auto">
+  <div class="flex-1 p-8 flex flex-col justify-center">
+    {title && <h3 class="font-bold text-lg text-[#A6A3D6] mb-2">{title}</h3>}
+    {subtitle && <div class="font-semibold text-[#A6A3D6] mb-2">{subtitle}</div>}
+    {description && <p class="text-white text-base leading-relaxed">{description}</p>}
+    <slot />
+  </div>
+  {imageSrc && (
+    <div class="flex-shrink-0 w-full md:w-72 h-56 md:h-auto">
+      <img src={imageSrc} alt={imageAlt || ''} class="object-cover w-full h-full rounded-r-3xl" loading="lazy" />
+    </div>
+  )}
+</div>

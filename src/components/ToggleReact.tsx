@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
 
-const ToggleReact = ({ options = ["Estudiante", "Empresa"], onChange }) => {
-  const [selected, setSelected] = useState(0);
 
-  const handleSelect = (idx) => {
+import React, { useEffect, useState } from 'react';
+
+type ToggleReactProps = {
+  options?: string[];
+  links?: string[];
+  onChange?: (selected: string) => void;
+  defaultSelected?: number;
+}
+
+const ToggleReact = ({ options = ["Estudiante", "Empresa"], links = [], onChange, defaultSelected = 0 }: ToggleReactProps) => {
+  const [selected, setSelected] = useState(defaultSelected);
+
+
+  const handleSelect = (idx: number) => {
     setSelected(idx);
     if (onChange) onChange(options[idx]);
+    if (links[idx]) {
+      window.location.pathname = links[idx];
+    }
   };
 
   return (

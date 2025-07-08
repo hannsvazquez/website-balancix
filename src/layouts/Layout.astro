@@ -36,6 +36,7 @@ const metaDescription = description || defaultDescription[lang];
     <meta property='og:site_name' content='Balancix' />
     <meta property='og:locale' content={lang} />
 
+
     <!-- Language alternates -->
     <link rel='alternate' href='https://balancix-academy.com/es/' hreflang='es' />
     <link rel='alternate' href='https://balancix-academy.com/en/' hreflang='en' />
@@ -43,11 +44,26 @@ const metaDescription = description || defaultDescription[lang];
     <link rel='icon' type='image/svg+xml' href='/logo/icon-balancix.svg' />
     <meta name='generator' content={Astro.generator} />
 
+    <!-- Google Tag Manager -->
+    <script>
+      // @ts-expect-error - Google Tag Manager script
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      // @ts-expect-error - Google Tag Manager script
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      // @ts-expect-error - Google Tag Manager script
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5BT2T7DZ');
+    </script>
+    <!-- End Google Tag Manager -->
 
-    <title>{title}</title>
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="9vAcM4H6s+tRDlWVuf2gfg" async></script>
   </head>
   <body class='bg-background text-white'>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BT2T7DZ"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <Header />
     <main class="flex">
       <div class="m-auto w-fit overflow-hidden">

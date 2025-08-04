@@ -23,7 +23,7 @@ const lang = Astro.url.pathname.includes("/en/") ? "en" : "es";
         <Dropdown client:load  label={translations[lang]["nav.solutions"]} options={[
           {
             label: translations[lang]["solutions.platform"],
-            href: "#"
+            href: "https://balancix-app.vercel.app/auth/login"
           },
           {
             label: translations[lang]["solutions.advisor"],
